@@ -1,5 +1,5 @@
 schedules:
-- cron: "15 * * * *"
+- cron: "2 * * * *"
   displayName: Testing 2 cron
   branches: 
     include:
