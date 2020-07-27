@@ -1,5 +1,5 @@
 schedules:
-- cron: "4 * * * *"
+- cron: "30 * * * *"
   displayName: Testing 2 cron
   branches: 
     include:
@@ -8,8 +8,7 @@ schedules:
 
 trigger: none
 
-pool:
-  vmImage: 'ubuntu-latest'
+pool: 'Default'
 
 steps:
 - script: echo Hello, world!
