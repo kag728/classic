@@ -18,7 +18,7 @@ steps:
   displayName: 'Run a multi-line script'
   
 schedules:
-- cron: "39 * * * *"
+- cron: "41 * * * *"
   displayName: Daily testing build
   branches:
     include:
