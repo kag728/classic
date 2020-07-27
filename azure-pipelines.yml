@@ -1,29 +1,16 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
+schedules:
+- cron: "5 * * * *"
+  displayName: Testing 2 cron
+  branches: 
+    include:
+      - master
+  always: true
 
-trigger:
-- master
+trigger: none
 
-pool: 'Default'
+pool:
+  vmImage: 'ubuntu-latest'
 
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
-  
-schedules:
-- cron: "41 * * * *"
-  displayName: Daily testing build
-  branches:
-    include:
-    - master
-    - releases/*
-    exclude:
-    - releases/ancient/*
-  always: true
